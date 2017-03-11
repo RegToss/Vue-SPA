@@ -8,10 +8,9 @@
   z-index: 30
   width: 100%
   background: #fff
-  &.move-transition
+  &.move-enter-active, &.move-leave-active
     transition: all 0.2s linear
-    transform: translate3d(0, 0, 0)
-  &.move-enter, &.move-leave
+  &.move-enter, &.move-leave-active
     transform: translate3d(100%, 0, 0)
   .image-header
     position: relative
@@ -81,10 +80,9 @@
       font-size: 10px
       color: #fff
       background: rgb(0, 160, 220)
-      &.fade-transition
+      &.fade-enter-active,  &.fade-leave-active
         transition: all 0.2s
-        opacity: 1
-      &.fade-enter, &.fade-leave
+      &.fade-enter, &.fade-leave-active
         opacity: 0
   .info
     padding: 18px
@@ -107,6 +105,7 @@
       color: rgb(7, 17, 27)
     .rating-wrapper
       padding: 0 18px
+      height: auto
       .rating-item
         position: relative
         padding: 16px 0

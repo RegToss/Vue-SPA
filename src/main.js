@@ -4,6 +4,7 @@ import Vue from 'vue';
 import App from './App';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
+import VueBus from 'vue-bus';
 import goods from './components/goods/goods.vue';
 import ratings from './components/ratings/ratings.vue';
 import seller from './components/seller/seller.vue';
@@ -15,7 +16,8 @@ Vue.config.productionTip = false;
 Vue.use(VueRouter);
 //全局注册VueResource
 Vue.use(VueResource);
-
+//vue-bus事件处理中心
+Vue.use(VueBus);
 const routes = [
   { path: '/goods', component: goods },
   { path: '/ratings', component: ratings },

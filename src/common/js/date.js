@@ -12,7 +12,7 @@ export function formatDate(date, fmt) {
 	for (let k in o) {
 		if (new RegExp(`(${k})`).test(fmt)) {
 			let str = o[k] + '';
-			fmt = fmt.replace(RegExp.$1, (RegExp.$1.length === 1) ? str : padLeftZero(str));
+			fmt = fmt.replace(RegExp.$1, (RegExp.$1.length === 1) ? str : padLeftZero(str));//如果传入的格式是1位，则返回原始值，否则补零。
 		}
 	}
 	return fmt;
